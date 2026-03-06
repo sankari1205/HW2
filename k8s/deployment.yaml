@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: swe645-web
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: swe645-web
+  template:
+    metadata:
+      labels:
+        app: swe645-web
+    spec:
+      containers:
+      - name: swe645-web
+        image: sankari1205/swe645-hw2:1.0
+        ports:
+        - containerPort: 80
