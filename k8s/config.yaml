@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Config
+clusters:
+- name: "hw2-cluster"
+  cluster:
+    server: "https://54.235.212.191/k8s/clusters/c-m-pmsmxtgr"
+    certificate-authority-data: "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJ2RENDQ\
+      VdPZ0F3SUJBZ0lCQURBS0JnZ3Foa2pPUFFRREFqQkdNUnd3R2dZRFZRUUtFeE5rZVc1aGJXbGoKY\
+      kdsemRHVnVaWEl0YjNKbk1TWXdKQVlEVlFRRERCMWtlVzVoYldsamJHbHpkR1Z1WlhJdFkyRkFNV\
+      GMzTWpjMQpOek01TnpBZUZ3MHlOakF6TURVeU16TTJNemRhRncwek5qQXpNREl5TXpNMk16ZGFNR\
+      Vl4SERBYUJnTlZCQW9UCkUyUjVibUZ0YVdOc2FYTjBaVzVsY2kxdmNtY3hKakFrQmdOVkJBTU1IV\
+      1I1Ym1GdGFXTnNhWE4wWlc1bGNpMWoKWVVBeE56Y3lOelUzTXprM01Ga3dFd1lIS29aSXpqMENBU\
+      VlJS29aSXpqMERBUWNEUWdBRXpLb3U3elYwM1pvcwpYOGQ4c0tXaXVOQndMOFcrZ2Nwci94OEhOM\
+      TNPY1FqTkpJNU9qeXdoelhJSklXTlQ4cVEvOUF1REtKREdhOUZhCmt3QTZ0WDhJWGFOQ01FQXdEZ\
+      1lEVlIwUEFRSC9CQVFEQWdLa01BOEdBMVVkRXdFQi93UUZNQU1CQWY4d0hRWUQKVlIwT0JCWUVGQ\
+      W5BbitnelAwaE1VRmpKbVFndVBMcmpQMmg1TUFvR0NDcUdTTTQ5QkFNQ0EwY0FNRVFDSUh0RwpKL\
+      1BTYkt2bmkyK2xxeHZqV01MV1p3OEVWS1Zpc3hYeklOY1p1UGZyQWlBT2tBc3plU0MzSnJPMFREc\
+      Vk2Z3FUCjZrbGE1TG1Ja01ycStFWUpqY2hIR1E9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0t"
+
+users:
+- name: "hw2-cluster"
+  user:
+    token: "kubeconfig-user-95b5z6gr5n:tp9nmdrt4grvtbhs9mj6268p7tq2qwhl5wnb9b9wshsvthtq4dz528"
+
+
+contexts:
+- name: "hw2-cluster"
+  context:
+    user: "hw2-cluster"
+    cluster: "hw2-cluster"
+
+current-context: "hw2-cluster"
+
