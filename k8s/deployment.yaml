@@ -14,6 +14,7 @@ spec:
     spec:
       containers:
       - name: swe645-web
-        image: sankari1205/swe645-hw2:1.0
+        image: sankari1205/swe645-hw2:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
