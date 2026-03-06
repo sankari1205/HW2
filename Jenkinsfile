@@ -16,12 +16,10 @@ pipeline {
             }
         }
 
-        stage('Build AMD64 Docker Image') {
+        stage('Build Docker Image') {
             steps {
                 sh '''
-                    docker buildx create --use --name mybuilder || true
-                    docker buildx inspect --bootstrap
-                    docker buildx build --platform linux/amd64 -t ${DOCKERHUB_USER}/${IMAGE_NAME}:${IMAGE_TAG} --load .
+                    docker build -t ${DOCKERHUB_USER}/${IMAGE_NAME}:${IMAGE_TAG} .
                 '''
             }
         }
