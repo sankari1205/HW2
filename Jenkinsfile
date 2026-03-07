@@ -19,7 +19,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 sh '''
-                    docker build -t ${DOCKERHUB_USER}/${IMAGE_NAME}:${IMAGE_TAG} .
+                    docker build --no-cache -t ${DOCKERHUB_USER}/${IMAGE_NAME}:${IMAGE_TAG} .
                 '''
             }
         }
